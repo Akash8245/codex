@@ -15,10 +15,10 @@ const DS = () => {
   };
 
   return (
-    <div className='bg-[#3a3939] h-[100%] text-white p-5'>
+    <div className='bg-[#3a3939]  text-white p-3'>
       <div className='flex'>
         <div
-          className={` cursor-pointer p-4 ${
+          className={` cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 1 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(1)}
@@ -26,7 +26,7 @@ const DS = () => {
           Lab 1
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 2 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(2)}
@@ -34,7 +34,7 @@ const DS = () => {
           Lab 2
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 3 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(3)}
@@ -42,7 +42,7 @@ const DS = () => {
           Lab 3
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 4 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(4)}
@@ -50,7 +50,7 @@ const DS = () => {
           Lab 4
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 5 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(5)}
@@ -58,7 +58,7 @@ const DS = () => {
           Lab 5
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 6 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(6)}
@@ -66,14 +66,14 @@ const DS = () => {
           Lab 6
         </div>
         <div
-          className={`cursor-pointer p-4 ${
+          className={`cursor-pointer p-3 h-[80px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
             activeTab === 7 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(7)}
         >
           Lab 7
         </div>
-          <h1 className='pt-4 pl-5 font-bold'>Happy Copy Pasting ! (˶ᵔ ᵕ ᵔ˶)</h1>
+
       </div>
       <div className='mt-4 p-4 '>
         {activeTab === 1 && <p><Lab1/></p>}
