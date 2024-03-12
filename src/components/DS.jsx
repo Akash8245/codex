@@ -18,7 +18,7 @@ const DS = () => {
     <div className='bg-[#3a3939]  text-white p-3'>
       <div className='flex'>
         <div
-          className={` cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] md:text-[18px] text-center ${
+          className={` cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] md:text-[18px] text-center  ${
             activeTab === 1 ? 'bg-blue-800 text-white' : 'bg-gray-600'
           }`}
           onClick={() => handleTabClick(1)}
