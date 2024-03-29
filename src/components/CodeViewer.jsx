@@ -1,10 +1,10 @@
 import React from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrowNight } from 'react-syntax-highlighter/dist/esm/styles/hljs'; // Use a dark theme like tomorrowNight
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'; 
 
 const CodeViewer = ({ code }) => {
   return (
-    <SyntaxHighlighter language="c" style={tomorrowNight}>
+    <SyntaxHighlighter language="c" style={atomOneDark}>
       {code}
     </SyntaxHighlighter>
   );
