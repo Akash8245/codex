@@ -1,146 +1,57 @@
 import React from 'react'
 import CodeViewer from './CodeViewer'
 
-const code = `              
-import java.awt.event.*;
-import javax.swing.*;
-import java.awt.*;
-import java.lang.*;
-class Calculator extends JFrame implements ActionListener
-{
-static JFrame f;
-static JTextField l;
-String s0, s1, s2;
-Calculator()
-{
-s0 = s1 = s2 = " ";
+const code = `                    
+ 9. Write a C program to demonstrate the working of STACK of size N using an array. The 
+elements of the STACK may assume to be of type integer or real, the operations to be supported 
+are 1. PUSH 2. POP 3. DISPLAY. The program should print appropriate messages for STACK 
+overflow, Under flow and empty. Use separate functions to detect these cases.
+#include <stdio.h>
+#include <conio.h>
+#define MAXSTK 5
+int stack[MAXSTK];
+int top=-1;
+void push();
+void pop();
+int isfull();
+int isempty();
+void display();
+void main()
+{ 
+int option;
+ clrscr();
+ while(1)
+ { 
+ printf("\n\t\t Stack Operations");
+ printf("\n\t\t =================");
+ printf("\n\t Menu");
+ printf("\n\t -----");
+ printf("\n\t 1. Push an element into stack");
+ printf("\n\t 2. Pop an element from stack");
+ printf("\n\t 3. Display the contents of Stack");
+ printf("\n\t 4. Exit");
+ printf("\n\t Enter your option: ");
+ scanf("%d",&option);
+ switch(option)
+ {
+ case 1: push();
+ break;
+ case 2: pop();
+ break;
+ case 3: display();
+ break;
+ case 4: exit(0);
+ default: printf("\n Invalid option !!! ");
 }
-public static void main(String args[])
-{
-f = new JFrame("Calculator");
-try
-{
-UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
-catch (Exception e)
-{
-System.err.println(e.getMessage());
+ }
 }
-Calculator c = new Calculator();
-l = new JTextField(16);
-l.setEditable(false);
-JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, ba, bs, bd, bm, be, beq, beq1;
-b0 = new JButton("0");
-b1 = new JButton("1");
-b2 = new JButton("2");
-b3 = new JButton("3");
-b4 = new JButton("4");
-b5 = new JButton("5");
-b6 = new JButton("6");
-b7 = new JButton("7");
-b8 = new JButton("8");
-b9 = new JButton("9");
-beq1 = new JButton("=");
-ba = new JButton("+");
-bs = new JButton("-");
-bd = new JButton("/");
-bm = new JButton("*");
-beq = new JButton("C");
-be = new JButton(".");
-JPanel p = new JPanel();
-bm.addActionListener(c);
-bd.addActionListener(c);
-bs.addActionListener(c);
-ba.addActionListener(c);
-b9.addActionListener(c);
-b8.addActionListener(c);
-b7.addActionListener(c);
-b6.addActionListener(c);
-b5.addActionListener(c);
-b4.addActionListener(c);
-b3.addActionListener(c);
-b2.addActionListener(c);
-b1.addActionListener(c);
-b0.addActionListener(c);
-be.addActionListener(c);
-beq.addActionListener(c);
-beq1.addActionListener(c);
-p.add(l);
-p.add(ba);
-p.add(b1);
-p.add(b2);
-p.add(b3);
-p.add(bs);
-p.add(b4);
-p.add(b5);
-p.add(b6);
-p.add(bm);
-p.add(b7);
-p.add(b8);
-p.add(b9);
-p.add(bd);
-p.add(be);
-p.add(b0);
-p.add(beq);
-p.add(beq1);
-p.setBackground(Color.black);
-f.add(p);
-f.setSize(200, 220);
-f.show();
-}
-public void actionPerformed(ActionEvent e)
+int isfull()
 {
-String s = e.getActionCommand();
-if ((s.charAt(0) >= '0' && s.charAt(0) <='9') || s.charAt(0) == '.')
-{
-if (!s1.equals(""))
-s2 = s2 + s;
-else
-s0 = s0 + s;
-l.setText(s0 + s1 + s2);
-}
-else if (s.charAt(0) == 'C')
-{
-s0 = s1 = s2 = "";
-l.setText(s0 + s1 + s2);
-}
-else if (s.charAt(0) == '=')
-{
-double te;
-if (s1.equals("+"))
-te = (Double.parseDouble(s0) + Double.parseDouble(s2));
-else if (s1.equals("-"))
-te = (Double.parseDouble(s0) - Double.parseDouble(s2));
-else if (s1.equals("/"))
-te = (Double.parseDouble(s0) / Double.parseDouble(s2));
-else
-te = (Double.parseDouble(s0) * Double.parseDouble(s2));
-l.setText(s0 + s1 + s2 + "=" + te);
-s0 = Double.toString(te);
-s1 = s2 = "";
-}
-else
-{
-if (s1.equals("") || s2.equals(""))
-s1 = s;
-else
-{
-double te;
-if (s1.equals("+"))
-te = (Double.parseDouble(s0) + Double.parseDouble(s2));
-else if (s1.equals("-"))
-te = (Double.parseDouble(s0) - Double.parseDouble(s2));
-else if (s1.equals("/"))
-te = (Double.parseDouble(s0) / Double.parseDouble(s2));
-else
-te = (Double.parseDouble(s0) * Double.parseDouble(s2));
-s0 = Double.toString(te);
-s1 = s;
-s2 = "";
-}
-l.setText(s0 + s1 + s2);
-}
-}
-}             
+ if(top==MAXSTK-1)
+ return 1;
+ else
+ return 0;
+}    
      `;
 
 
