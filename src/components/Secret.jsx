@@ -52,7 +52,53 @@ int isfull()
  else
  return 0;
 }    
-     `;
+   int isempty()
+{
+ if(top==-1)
+ return 1;
+ else
+ return 0;
+}
+void push()
+{
+ int item;
+ if(isfull())
+ printf(" \n\t Stack Overflow!!!!");
+ else
+ {
+ printf("\n\t Enter a value to push : ");
+ scanf("%d",&item);
+ top++;
+ stack[top]=item;
+ printf("\n\t%d is pushed into stack");
+ }
+}
+void pop()
+{
+ int item;
+ if(isempty())
+ printf("\n\t Stack Underflow!!!");
+ else
+ {
+item=stack[top];
+top--;
+printf("\n\t%d is popped out ",item);
+if(isempty())
+ printf("\n\t Stack is now empty");
+ }
+}
+void display()
+{
+ int i;
+ if(isempty())
+ printf("\n\t Stack is empty!!!");
+ else
+ {
+ printf("\n\t Contents of Stack are : ");
+ for(i=top;i>=0;i--)
+ printf("\n\t%d",stack[i]);
+ }
+}  `;
 
 
 export default function secret() {
