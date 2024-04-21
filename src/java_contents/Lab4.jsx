@@ -17,15 +17,15 @@ public class lab4 {
 class overload_demo{
 	void area(float x)
 	{
-		System.out.print("\nThe area of Square is "+Math.pow(x,2));
+		System.out.print("The area of Square is "+Math.pow(x,2));
 	}
 	void area(float x,float y) {
-		System.out.print("\nThe area od rectangle "+x*y);
+		System.out.print("The area od rectangle "+x*y);
 	}
 	void area(float x,float y,float z) {
 		double s=(x+y+z)/2;
 		double a = Math.sqrt((s-x)*(s-y)*(s-z)*s);
-		System.out.print("\nThe area of triangle "+a);
+		System.out.print("The area of triangle "+a);
 	}
 }`;
 

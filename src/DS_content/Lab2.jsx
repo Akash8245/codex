@@ -7,12 +7,12 @@ void main()
 {
 int n,r;
 int fact(int);
-printf(“\n enter the value for n & r:”);
+printf(“ enter the value for n & r:”);
 scanf(“%d%d”,&n,&r);
 if(n<r)
-printf(“invalid input \n”);
+printf(“invalid input ”);
 else
-printf(“\n binomial co-efficient ncr is %d”, fact(n)/(fact(n-r)*fact(r)));
+printf(“ binomial co-efficient ncr is %d”, fact(n)/(fact(n-r)*fact(r)));
 getch();
 }
 int fact(int n)

@@ -32,7 +32,7 @@ a[j+1] = temp;
 }
 }
 }
-System.out.print("\nArray Elements in Ascending Order: ");
+System.out.print("Array Elements in Ascending Order: ");
 for (int i = 0; i < n; i++)
 {
 System.out.print(a[i] + "\t");

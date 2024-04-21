@@ -8,20 +8,20 @@ void main()
 {
 int i;
 void qsort(int,int);
-printf("\n Quick Sort");
-printf("\n-----------------");
-printf("\n Enter the number of elements:\n");
+printf(" Quick Sort");
+printf("-----------------");
+printf(" Enter the number of elements:");
 scanf("%d",&n);
-printf("\n Enter the elements:\n");
+printf(" Enter the elements:");
 for(i=0;i<n;i++)
 scanf("%d",&a[i]);
-printf("\n Before Sorting:\n");
+printf(" Before Sorting:");
 for(i=0;i<n;i++)
-printf("%d \t",a[i]);
+printf("%d ",a[i]);
 qsort(0,n-1);
-printf("\n After Sorting:\n");
+printf(" After Sorting:");
 for(i=0;i<n;i++)
-printf("%d\t",a[i]);
+printf("%d",a[i]);
 getch();
 }
 void qsort(int low,int high)

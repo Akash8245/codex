@@ -6,7 +6,7 @@ const code = `#include <stdio.h>
 #include <conio.h>
 
 int lengthstring(char str[20], int i) {
-  if (str[i] == '\\0')
+  if (str[i] == '0')
     return (0);
   else
     return (1 + lengthstring(str, i + 1));
@@ -16,12 +16,12 @@ void main() {
   int length;
   char str[20];
   clrscr();
-  printf("\\nProgram to calculate length of the string using recursion");
-  printf("\\n----------------------------------------------------------");
-  printf("\\nEnter a string ");
+  printf("Program to calculate length of the string using recursion");
+  printf("----------------------------------------------------------");
+  printf("Enter a string ");
   gets(str);
   length = lengthstring(str, 0);
-  printf("\\nString is %s and its length is %d", str, length);
+  printf("String is %s and its length is %d", str, length);
   getch();
 }`;
 

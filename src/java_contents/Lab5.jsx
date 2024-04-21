@@ -11,7 +11,7 @@ class one extends Thread {
             } catch(InterruptedException e) {
                 System.out.print(e);
             }
-            System.out.print("\nGood Morning");
+            System.out.print("Good Morning");
         }
     }
 }
@@ -24,7 +24,7 @@ class two extends Thread {
             } catch(InterruptedException e) {
                 System.out.print(e);
             }
-            System.out.print("\nHello");
+            System.out.print("Hello");
         }
     }
 }
@@ -37,7 +37,7 @@ class three implements Runnable {
             } catch(InterruptedException e) {
                 System.out.print(e);
             }
-            System.out.print("\nWelcome !");
+            System.out.print("Welcome !");
         }
     }
 }

@@ -5,7 +5,9 @@ import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const CodeViewer = ({ code }) => {
   return (
     <SyntaxHighlighter language="c" style={atomOneDark}>
+      
       {code}
+      
     </SyntaxHighlighter>
   );
 };

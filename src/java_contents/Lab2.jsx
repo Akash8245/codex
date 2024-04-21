@@ -16,7 +16,7 @@ public class lab2 {
 					p=1;
 			}
 			if(p==0)
-				System.out.print("\nThe prime number are: "+i);
+				System.out.print("The prime number are: "+i);
 		}
 		
 	}

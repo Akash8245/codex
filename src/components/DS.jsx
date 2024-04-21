@@ -7,6 +7,8 @@ import Lab5 from '../DS_content/Lab5';
 import Lab6 from '../DS_content/Lab6';
 import Lab7 from '../DS_content/Lab7';
 import Lab8 from '../DS_content/Lab8';
+import Lab9 from '../DS_content/Lab9';
+import Lab10 from '../DS_content/Lab10';
 
 const DS = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -74,16 +76,33 @@ const DS = () => {
         >
           Lab 7
         </div>
-        
       </div>
       <div className='mt-[5px] '>
-      <div
-          className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[68px] md:text-[16px] text-center ${
-            activeTab === 8 ? 'bg-blue-800 text-white' : 'bg-gray-600'
-          }`}
-          onClick={() => handleTabClick(8)}
-        >
-          Lab 8
+        <div className="flex">
+          <div
+            className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[68px] md:text-[16px] text-center ${
+              activeTab === 8 ? 'bg-blue-800 text-white' : 'bg-gray-600'
+            }`}
+            onClick={() => handleTabClick(8)}
+          >
+            Lab 8
+          </div>
+          <div
+            className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[68px] md:text-[16px] text-center ${
+              activeTab === 9 ? 'bg-blue-800 text-white' : 'bg-gray-600'
+            }`}
+            onClick={() => handleTabClick(9)}
+          >
+            Lab 9
+          </div>
+          <div
+            className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[80px] md:text-[16px] text-center ${
+              activeTab === 10 ? 'bg-blue-800 text-white' : 'bg-gray-600'
+            }`}
+            onClick={() => handleTabClick(10)}
+          >
+            Lab 10
+          </div>
         </div>
       </div>
       <div className='mt-4 p-4 '>
@@ -95,6 +114,8 @@ const DS = () => {
         {activeTab === 6 && <p><Lab6/> </p>}
         {activeTab === 7 && <p><Lab7/> </p>}
         {activeTab === 8 && <p><Lab8/> </p>}
+        {activeTab === 9 && <p><Lab9/> </p>}
+        {activeTab === 10 && <p><Lab10/> </p>}
       </div>
     </div>
   );

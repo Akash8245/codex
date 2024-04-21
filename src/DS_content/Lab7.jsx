@@ -7,20 +7,20 @@ int a[10],n,i,j;
 void mergesort(int low ,int high);
 void main()
 {
-printf("\n Merge Sort");
-printf("\n-----------");
-printf("\n Enter number of elements to sort");
+printf(" Merge Sort");
+printf("-----------");
+printf(" Enter number of elements to sort");
 scanf("%d",&n);
-printf("\n Enter %d elements of the array ",n);
+printf(" Enter %d elements of the array ",n);
 for(i=0;i<n;i++)
 scanf("%d",&a[i]);
-printf("\n Before Sorting \n");
+printf(" Before Sorting ");
 for(i=0;i<n;i++)
-printf("%d\t",a[i]);
+printf("%d",a[i]);
 mergesort(0,n-1);
-printf("\n After Sorting \n");
+printf(" After Sorting ");
 for(i=0;i<n;i++)
-printf("%d\t",a[i]);
+printf("%d",a[i]);
 getch();
 }
 void mergesort(int low , int high)
