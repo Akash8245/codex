@@ -79,7 +79,7 @@ int isempty()
 void push(char symbol)
 {
   if(isfull())
-    printf("\n Stack is full");
+    printf(" Stack is full");
   else
     {
       top++;
