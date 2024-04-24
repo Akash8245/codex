@@ -335,7 +335,9 @@ const Lab10 = () => {
   return (
     <div>
       <h1 className='pb-2'>10:- Write a c program to convert and print valid fully paranthezised infix arithmetic expression to postfix.
+<br>
 11. Write a C program to evaluate a postfix expression.
+<br>
 12. Write a C program to simulate the working of a Circular Queue using an array. Provide the operations CQINSERT,
 CQDELETE and CQDISPLAY. Check the Circular Queue status for empty and full. </h1>
       <CodeViewer code={code} />
