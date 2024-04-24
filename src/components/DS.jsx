@@ -101,7 +101,7 @@ const DS = () => {
             }`}
             onClick={() => handleTabClick(10)}
           >
-            Lab 10
+            Lab 10/11/12
           </div>
         </div>
       </div>
