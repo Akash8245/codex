@@ -9,6 +9,7 @@ import JavaLab7 from '../java_contents/Lab7';
 import JavaLab8 from '../java_contents/Lab8';
 import JavaLab9 from '../java_contents/Lab9';
 import JavaLab10 from '../java_contents/Lab10';
+import JavaLab11 from '../java_contents/Lab11';
 
 const Java = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -33,7 +34,7 @@ const Java = () => {
         ))}
       </div>
       <div className='flex flex-wrap '>
-        {[8, 9, 10].map((tabNumber) => (
+        {[8, 9, 10, 11].map((tabNumber) => (
           <div
             key={tabNumber}
             className={`cursor-pointer p-3 h-[50px] md:h-[55px] text-[12px] md:text-[18px] text-center  w-[50px] md:w-[80px] mt-1 ${
@@ -56,6 +57,7 @@ const Java = () => {
         {activeTab === 8 && <p><JavaLab8/> </p>}
         {activeTab === 9 && <p><JavaLab9/> </p>}
         {activeTab === 10 && <p><JavaLab10/> </p>}
+        {activeTab === 11 && <p><JavaLab11/> </p>}
       </div>
     </div>
   );

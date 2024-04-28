@@ -102,9 +102,9 @@ public class Calculator extends JFrame implements ActionListener  {
 	{
 		String s = e.getActionCommand();
 
-		// if the value is a number
+		
 		if ((s.charAt(0) >= '0' && s.charAt(0) <= '9') ) {
-			// if operator is present then add to second no else add to first no
+			
 			if (!s1.equals(""))
 				s2 =  s2+s;
 			else
@@ -138,10 +138,9 @@ public class Calculator extends JFrame implements ActionListener  {
 			
 			s1 = s2 = "";
 		}
-		else { //if user presses an operator
-			if (s1.equals("") || s2.equals(""))//first time pressing operator
+		else { 
+			if (s1.equals("") || s2.equals(""))
 				s1 = s;
-			// else evaluate, user presses operator instead of an = to continue with next operation
 			else {
 				double result;
 

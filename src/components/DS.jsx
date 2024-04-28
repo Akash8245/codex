@@ -9,6 +9,8 @@ import Lab7 from '../DS_content/Lab7';
 import Lab8 from '../DS_content/Lab8';
 import Lab9 from '../DS_content/Lab9';
 import Lab10 from '../DS_content/Lab10';
+import Lab11 from '../DS_content/Lab11';
+import Lab12 from '../DS_content/Lab12';
 
 const DS = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -101,7 +103,23 @@ const DS = () => {
             }`}
             onClick={() => handleTabClick(10)}
           >
-            Lab 10/11/12
+            Lab 10
+          </div>
+          <div
+            className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[80px] md:text-[16px] text-center ${
+              activeTab === 11 ? 'bg-blue-800 text-white' : 'bg-gray-600'
+            }`}
+            onClick={() => handleTabClick(11)}
+          >
+            Lab 11
+          </div>
+          <div
+            className={`cursor-pointer p-3 h-[50px] md:h-[50px] text-[12px] w-[48px] md:w-[80px] md:text-[16px] text-center ${
+              activeTab === 12 ? 'bg-blue-800 text-white' : 'bg-gray-600'
+            }`}
+            onClick={() => handleTabClick(12)}
+          >
+            Lab 12
           </div>
         </div>
       </div>
@@ -116,6 +134,8 @@ const DS = () => {
         {activeTab === 8 && <p><Lab8/> </p>}
         {activeTab === 9 && <p><Lab9/> </p>}
         {activeTab === 10 && <p><Lab10/> </p>}
+        {activeTab === 11 && <p><Lab11/> </p>}
+        {activeTab === 12 && <p><Lab12/> </p>}
       </div>
     </div>
   );
