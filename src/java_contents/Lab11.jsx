@@ -2,7 +2,34 @@ import React from 'react';
 import CodeViewer from '../components/CodeViewer';
 
 const code = `
-Comming Soon .........
+package jdbc;
+import java.sql.*;
+
+public class jdbc_2 {
+    public static void main(String[] args) throws ClassNotFoundException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String mysqlurl = "jdbc:mysql://localhost:3306/akash";
+            Connection con = DriverManager.getConnection(mysqlurl ,"root","tiger" );
+            System.out.println("Connection established...");
+            Statement s = con.createStatement();
+            String sql = "select * from student";
+            ResultSet rs = s.executeQuery(sql);
+            System.out.println("Student details:");
+            while(rs.next()) {
+                System.out.print(rs.getString("student_id")+"\ t");
+                System.out.print(rs.getString("student_name")+"\ t");
+                System.out.print(rs.getString("student_course"));
+                System.out.println();
+            }
+            con.close();            
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+}
 
 `;
 
