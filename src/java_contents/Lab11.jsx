@@ -30,6 +30,14 @@ public class jdbc_2 {
 
     }
 }
+#in SQL
+
+
+create table student(student_id int ,student_name varchar(20),student_course varchar(20);
+
+insert into student values(001,"Akash","BCA");
+insert into student values(002,"Mahesh","BCA");
+ insert into student values(003,"Akhil","BCom");
 
 `;
 
