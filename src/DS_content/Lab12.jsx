@@ -12,7 +12,7 @@ void cqdelete();
 void cqdisplay();
 int cqueue[MAXQ], rear=-1, front=-1, item;
 
-main()
+void main()
 {
 	int option;
 	clrscr();
