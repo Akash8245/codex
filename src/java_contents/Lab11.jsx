@@ -17,8 +17,8 @@ public class jdbc_2 {
             ResultSet rs = s.executeQuery(sql);
             System.out.println("Student details:");
             while(rs.next()) {
-                System.out.print(rs.getString("student_id")+"\ t");
-                System.out.print(rs.getString("student_name")+"\ t");
+                System.out.print(rs.getString("student_id")+"\t");
+                System.out.print(rs.getString("student_name")+"\t");
                 System.out.print(rs.getString("student_course"));
                 System.out.println();
             }
