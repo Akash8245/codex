@@ -9,7 +9,7 @@ export default function Nav() {
       <nav className='flex justify-between pl-12 h-[60px] bg-black text-white text-[20px] md:text-[30px] space-x-5 pt-3.5 md:pt-2 '>
         <div className='cursor-pointer font-bold'>
           <Link to="/secret" className="text-white">
-            <p>Code<span className="text-blue-800 font-bold">X🖕</span></p>
+            <p>Code<span className="text-blue-800 font-bold">X</span></p>
           </Link>
         </div>
 
