@@ -2,26 +2,40 @@
 import React from 'react';
 import CodeViewer from '../components/CodeViewer';
 
-const code = `#include<stdio.h>
-void main()
-{
-int n,r;
-int fact(int);
-printf(“ enter the value for n & r:”);
-scanf(“%d%d”,&n,&r);
-if(n<r)
-printf(“invalid input ”);
-else
-printf(“ binomial co-efficient ncr is %d”, fact(n)/(fact(n-r)*fact(r)));
-getch();
-}
-int fact(int n)
-{
-if(n==0 || n==1)
-return 1;
-else
-return(n*(fact(n-1)));
-}`;
+const code = `
+import numpy as np
+
+import pandas as pd
+
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+
+data = {'Name':
+
+'John', 'Alice', 'Bob', 'David', 'Eve"],
+
+"Age: 25, np. nan, 30, 22, 28),
+
+Salary: 150000, 50000, пр.пал, 52000, 58000], "Dept': ['HR", "IT', 'Finance', 'IT', 'H}
+
+dfpd.DataFrame(data)
+
+print("Original Data:\n", df)
+
+df 'Age'] df ['Age"].fillna(df["Age'].mean())
+
+df [Salary] df['Salary"].fillna(df['Salary'].mean()) print"\nAfter Handling Missing Values: \n", df
+
+encoder Label Encoder()
+
+df['Dept] encoder.fit transform(df ['Dept']) print("\nAfter Encoding 'Dept':\n", df)
+
+scaler MinMaxScaler()
+
+df[['Age', 'Salary']] = scaler.fit_transform(df[['Age', 'Salary']])
+
+print("\nAfter Normalization:\n", df)
+
+`;
 
 const Lab2 = () => {
   return (
